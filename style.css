@@ -2,4 +2,28 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main{
+    padding: 30px;
+    height: 100vh;
+}
+
+.section-1{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.section-1 h1,h4{
+    font-weight: 400;
+}
+
+.section-1 .div-2 h1{
+    margin-bottom: 5px;
+}
+
+.section-1 .div-2{
+    margin-left: 15px;
 }

@@ -36,13 +36,28 @@
                 </div>
             </section>
             <section class="section-2">
-                <div class="drop-zone">
-                    <p>
-                        Drag a file or
-                        <span><button type="button" role="button">Click here</button></span> to
-                        select a file for upload
-                    </p>
-                </div>
+                <form action="" class="section-2">
+                    <div class="drop-zone">
+                        <img
+                            crossorigin="anonymous"
+                            src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-image-interface-kiranshastry-lineal-color-kiranshastry-1.png"
+                        />
+                        <p>
+                            <span style="color: #22969b">Drag</span> a file or
+                            <span style="color: #22969b">Click</span> to select a file for upload
+                        </p>
+                        <p>supported - png, jpg, jpeg</p>
+                        <input type="file" id="drop-zone-input" />
+                    </div>
+                    <button type="submit" role="button">
+                        <img
+                            crossorigin="anonymous"
+                            src="https://img.icons8.com/ultraviolet/40/000000/settings.png"
+                            width="24px"
+                            height="24px"
+                        />Predict
+                    </button>
+                </form>
             </section>
         </main>
         <script src="./index.js"></script>

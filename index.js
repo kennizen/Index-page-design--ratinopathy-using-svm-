@@ -24,7 +24,7 @@ dragLeaveEvents.forEach((event) => {
 
 dropZone.addEventListener("drop", (e) => {
     e.preventDefault();
-    console.log(e.dataTransfer);
+
     if (e.dataTransfer.files.length > 0) {
         const file = e.dataTransfer.files[0];
         if (file.type === "image/jpeg" || file.type === "image/png" || file.type === "image/jpg") {
@@ -35,8 +35,6 @@ dropZone.addEventListener("drop", (e) => {
             remove();
         }
     }
-
-    console.log(dropInput);
 });
 
 function remove() {

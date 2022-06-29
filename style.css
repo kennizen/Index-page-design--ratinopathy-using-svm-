@@ -60,8 +60,22 @@ main{
    margin-right: 10px;
 }
 
+@keyframes spin{
+    from {
+        transform: rotate(0deg);
+    } 
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .section-2 button:hover{
     background-color: #1a7579;
+}
+
+.section-2 button:hover > img{
+    animation: spin 2s infinite linear;
 }
 
 .drop-zone{
@@ -81,7 +95,7 @@ main{
     padding: 30px 10px;
 }
 
-.drop-zone :nth-child(3){
+.drop-zone .supported{
     font-size: 1rem;
     font-weight: 200;
 }
@@ -91,6 +105,8 @@ main{
 }
 
 .drop-zone .img-container{
+    display: none;
+    background-color: aliceblue;
     width: 200px;
     height: 180px;
     border-radius: 10px;
@@ -99,6 +115,7 @@ main{
 }
 
 .drop-zone .img-label{
+    display: none;
     font-size: 1rem;
     flex-shrink: 0;
     height: 40px;

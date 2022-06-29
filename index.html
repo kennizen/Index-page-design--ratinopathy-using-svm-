@@ -36,18 +36,21 @@
                 </div>
             </section>
             <section class="section-2">
-                <form action="" class="section-2">
+                <form action="" class="section-2" enctype="multipart/form-data">
                     <div class="drop-zone">
                         <img
+                            class="image"
                             crossorigin="anonymous"
                             src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/64/000000/external-image-interface-kiranshastry-lineal-color-kiranshastry-1.png"
                         />
-                        <p>
+                        <p class="heading">
                             <span style="color: #22969b">Drag</span> a file or
                             <span style="color: #22969b">Click</span> to select a file for upload
                         </p>
-                        <p>supported - png, jpg, jpeg</p>
-                        <input type="file" id="drop-zone-input" />
+                        <p class="supported">supported - png, jpg, jpeg</p>
+                        <div class="img-container"></div>
+                        <p class="img-label"></p>
+                        <input type="file" id="drop-zone-input" name="drop-zone-input" />
                     </div>
                     <button type="submit" role="button">
                         <img

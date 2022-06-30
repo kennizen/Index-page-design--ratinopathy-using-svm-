@@ -9,3 +9,5 @@ This is a project I did to design a responsive index page for a friend
 # Responsive mobile
 
 <img src="https://user-images.githubusercontent.com/57834820/176698751-06fe5fb7-a3fc-42a5-bdf0-e2e147bc82dc.png" />
+
+Hosted url - https://ratinopathysvm.netlify.app/

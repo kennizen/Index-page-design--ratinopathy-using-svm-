@@ -27,13 +27,7 @@ dropZone.addEventListener("drop", (e) => {
 
     if (e.dataTransfer.files.length > 0) {
         const file = e.dataTransfer.files[0];
-        if (file.type === "image/jpeg" || file.type === "image/png" || file.type === "image/jpg") {
-            dropInput.files = e.dataTransfer.files;
-            updateImage(file);
-        } else {
-            alert("Incorrect file type");
-            remove();
-        }
+        updateImage(file);
     }
 });
 
@@ -49,6 +43,13 @@ function updateImage(file) {
     const imgLabel = document.querySelector(".img-label");
 
     remove();
+
+    if (file.type === "image/jpeg" || file.type === "image/png" || file.type === "image/jpg") {
+        dropInput.files[0] = file;
+    } else {
+        alert("Incorrect file type");
+        return;
+    }
 
     if (image != undefined && heading != undefined && supported != undefined) {
         image.style.display = "none";

@@ -16,6 +16,7 @@ main{
 }
 
 .section-1{
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -42,6 +43,7 @@ main{
 }
 
 .section-2 button{
+    margin-bottom: 10px;
     width: fit-content;
     padding: 8px 10px;
     font-size: 1rem;
@@ -126,3 +128,49 @@ main{
     border: 2px solid #9e9e9e;
     /* background-color: #e0e0e0; */
 }
+
+
+@media only screen and (max-width: 768px) {
+    .section-1{
+        justify-content: center;
+    }
+
+    .section-1 .div-1 svg{
+        width: 60px;
+        height: 60px;
+    }
+
+    .section-1 .div-2 h1{
+        font-size: 1.3rem;
+    }
+
+    .section-1 .div-2 h4{
+        font-size: 1rem;
+    }
+
+    .drop-zone .heading{
+        font-size: 1rem;
+    }
+
+    .drop-zone .supported{
+        font-size: 0.8rem;
+    }
+  } 
+
+  @media only screen and (max-width: 600px) {
+    main{
+        margin: 0px 10px;
+    }
+
+    .section-1 .div-2 h1{
+        font-size: 1.1rem;
+    }
+
+    .section-1 .div-2 h4{
+        font-size: 0.8rem;
+    }
+
+    .drop-zone .heading{
+        font-size: 0.8rem;
+    }
+  } 

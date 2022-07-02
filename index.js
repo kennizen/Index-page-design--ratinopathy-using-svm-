@@ -68,5 +68,3 @@ function updateImage(file) {
         imgContainer.style.backgroundImage = `url('${reader.result}')`;
     };
 }
-
-console.log(dropInput, dropZone);

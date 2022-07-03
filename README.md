@@ -1,4 +1,4 @@
-# Index-page-design--ratinopathy-using-svm-
+# Index-page-design-with-file-upload--ratinopathy-using-svm-
 
 This is a project I did to design a responsive index page for a friend
 

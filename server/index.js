@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const path = require("path");
+const { spawn } = require("child_process");
 
 const app = express();
 const PORT = 5000;
@@ -18,7 +19,13 @@ app.post("/predict", fileUpload({ createParentPath: true }), (req, res) => {
         if (err) return res.status(500).json({ error: "file upload unsuccessfull" });
     });
 
-    return res.json({ success: "File uploaded" });
+    const childPython = spawn("python", ["prediction.py", filePath]);
+
+    childPython.stdout.on("data", (d) => {
+        console.log(d.toString());
+    });
+
+    return res.status(200).json({ success: "File uploaded" });
 });
 
 app.listen(PORT, () => {

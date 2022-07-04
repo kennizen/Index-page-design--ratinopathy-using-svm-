@@ -14,7 +14,7 @@
         />
         <link rel="stylesheet" href="style.css" />
     </head>
-    <body>
+    <body onload="load()">
         <main>
             <section class="section-1">
                 <div class="div-1">
@@ -36,7 +36,7 @@
                 </div>
             </section>
             <section class="section-2">
-                <form class="section-2" enctype="multipart/form-data">
+                <form id="drop-form" class="section-2" enctype="multipart/form-data">
                     <div class="drop-zone">
                         <img
                             class="image"
@@ -52,7 +52,7 @@
                         <p class="img-label"></p>
                         <input type="file" id="drop-zone-input" name="drop-zone-input" />
                     </div>
-                    <button type="submit" role="button">
+                    <button type="submit">
                         <img
                             crossorigin="anonymous"
                             src="https://img.icons8.com/ultraviolet/40/000000/settings.png"
@@ -63,7 +63,7 @@
                 </form>
             </section>
         </main>
-        <script src="./index.js"></script>
+        <script src="./drop.js"></script>
         <script src="./submit.js"></script>
     </body>
 </html>

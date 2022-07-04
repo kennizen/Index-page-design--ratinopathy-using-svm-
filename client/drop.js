@@ -26,6 +26,7 @@ dropZone.addEventListener("drop", (e) => {
     e.preventDefault();
 
     if (e.dataTransfer.files.length > 0) {
+        dropInput.files = e.dataTransfer.files;
         const file = e.dataTransfer.files[0];
         updateImage(file);
     }
@@ -35,7 +36,21 @@ function remove() {
     dropZone.classList.remove("drop-zone-over");
 }
 
+function checkImage(type) {
+    const check = ["image/jpeg", "image/png", "image/jpg"];
+    for (let i = 0; i < check.length; i++) {
+        if (type === check[i]) return true;
+    }
+    return false;
+}
+
 function updateImage(file) {
+    if (checkImage(file.type) === false) {
+        dropInput.value = null;
+        alert("Incorrect file type");
+        return;
+    }
+
     const image = document.querySelector(".image");
     const heading = document.querySelector(".heading");
     const supported = document.querySelector(".supported");
@@ -43,13 +58,6 @@ function updateImage(file) {
     const imgLabel = document.querySelector(".img-label");
 
     remove();
-
-    if (file.type === "image/jpeg" || file.type === "image/png" || file.type === "image/jpg") {
-        dropInput.files[0] = file;
-    } else {
-        alert("Incorrect file type");
-        return;
-    }
 
     if (image != undefined && heading != undefined && supported != undefined) {
         image.style.display = "none";
@@ -67,4 +75,8 @@ function updateImage(file) {
     reader.onload = (e) => {
         imgContainer.style.backgroundImage = `url('${reader.result}')`;
     };
+}
+
+function load() {
+    dropInput.value = null;
 }

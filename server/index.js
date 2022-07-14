@@ -23,9 +23,8 @@ app.post("/predict", fileUpload({ createParentPath: true }), (req, res) => {
 
     childPython.stdout.on("data", (d) => {
         console.log(d.toString());
+        return res.status(200).json({ success: "File uploaded", prediction: d.toString() });
     });
-
-    return res.status(200).json({ success: "File uploaded" });
 });
 
 app.listen(PORT, () => {

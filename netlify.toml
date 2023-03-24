@@ -1,0 +1,17 @@
+[build]
+  publish = "client"
+  
+[[redirects]]
+  from = "/api/*"
+  to = "http://localhost:3000/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/frontend/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "http://localhost:4000/:splat"
+  status = 200
